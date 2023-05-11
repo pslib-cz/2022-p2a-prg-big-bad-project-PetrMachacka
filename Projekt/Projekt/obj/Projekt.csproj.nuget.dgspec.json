@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {}
+    "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {
+    "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
+        "projectUniqueName": "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
         "projectName": "Projekt",
-        "projectPath": "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
-        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\obj\\",
+        "projectPath": "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
+        "packagesPath": "C:\\Users\\Uživatel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uživatel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,8 +45,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -55,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

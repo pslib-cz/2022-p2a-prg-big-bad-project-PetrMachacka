@@ -1,7 +1,3 @@
-﻿Console.WriteLine(
-    "o  o  o  o  o\n" +
-    "o  o  o  o  o\n" +
-    "o  o  o  o  o\n" +
-    "o  o  o  o  o\n" +
-    "o  o  o  o  o\n" 
-    );
+﻿using DotsABoxes;
+string[,]array2D = BaseMechanics.GenerateArray(4,5);
+BaseMechanics.ReGenerate(array2D);
