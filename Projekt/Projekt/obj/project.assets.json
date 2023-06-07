@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
+      "projectUniqueName": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
       "projectName": "Projekt",
-      "projectPath": "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
+      "projectPath": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
       "packagesPath": "C:\\Users\\Uživatel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Uživatel\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\obj\\",
+      "outputPath": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Uživatel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -51,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
