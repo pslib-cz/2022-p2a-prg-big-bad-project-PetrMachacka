@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {}
+    "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {
+    "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
+        "projectUniqueName": "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
         "projectName": "Projekt",
-        "projectPath": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
-        "packagesPath": "C:\\Users\\Uživatel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\obj\\",
+        "projectPath": "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\Projekt.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Peter\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\Projekt\\Projekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Uživatel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
