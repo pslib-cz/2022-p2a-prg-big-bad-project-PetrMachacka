@@ -1,7 +1,4 @@
 ﻿using Projekt.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Net;
 using System.Text.RegularExpressions;
 
 public class GameEngine : IGameEngine
@@ -58,7 +55,7 @@ public class GameEngine : IGameEngine
                         Console.Write($" {(_connections[row / 2][column] == null ? 0 : 1)} ");
                     }
                     Console.ResetColor();
-                    
+
                 }
             }
             else
@@ -82,11 +79,11 @@ public class GameEngine : IGameEngine
     }
     public bool IsMoveValid(string Cords, string Cords1)
     {
-        if (ValidateCoordinates(Cords) & ValidateCoordinates(Cords1) )
+        if (ValidateCoordinates(Cords) & ValidateCoordinates(Cords1))
         {
             string[] pos = Cords.Split(' ');
             string[] pos1 = Cords1.Split(' ');
-            if (_board[int.Parse(pos[0])][int.Parse(pos[ 1])] == null | _board[int.Parse(pos1[0])][int.Parse(pos1[1])] == null)
+            if (_board[int.Parse(pos[0])][int.Parse(pos[1])] == null | _board[int.Parse(pos1[0])][int.Parse(pos1[1])] == null)
             {
                 return true;
             }
@@ -125,7 +122,7 @@ public class GameEngine : IGameEngine
             }
         }
 
-        
+
         _board[X][Y] = 1;
         _board[X1][Y1] = 1;
         _currentPlayer = (_currentPlayer == "Player 1") ? "Player 2" : "Player 1";

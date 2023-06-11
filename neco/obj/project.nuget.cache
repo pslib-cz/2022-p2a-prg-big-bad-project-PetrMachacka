@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OjIsvF60zAldHWxKfDktIo0i7vNUfpZDpkIqy6g3R3Li5IfNQH56P4Aul6Pk3AwjTn3dWFRC0bLilhKeyITSSw==",
+  "dgSpecHash": "EMCIRcafPy4xlcUsOUPu7bh4+WybxxlWhYW8JvpdEDbHBDWAfXZToPTzHVNa3NB44z+vHS9OcdqEKhSqJ6P+Rg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Uživatel\\source\\repos\\neco\\neco\\neco.csproj",
+  "projectFilePath": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\neco\\neco.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Uživatel\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Uživatel\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
