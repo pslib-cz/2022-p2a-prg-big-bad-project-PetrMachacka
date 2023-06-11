@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "OjIsvF60zAldHWxKfDktIo0i7vNUfpZDpkIqy6g3R3Li5IfNQH56P4Aul6Pk3AwjTn3dWFRC0bLilhKeyITSSw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Uživatel\\source\\repos\\neco\\neco\\neco.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Uživatel\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\Uživatel\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
