@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Projekt.Interfaces;
-using System;
 
 namespace Projekt
 {
@@ -17,8 +16,8 @@ namespace Projekt
         {
             return new ServiceCollection()
                 .AddSingleton<IGameEngine, GameEngine>()
-                .AddSingleton<IPlayer>(provider => new Player("Player 1")) 
-                .AddSingleton<IPlayer>(provider => new Player("Player 2")) 
+                .AddSingleton<IPlayer>(Player1 => new Player("Player 1"))
+                .AddSingleton<IPlayer>(Player2 => new Player("Player 2"))
                 .AddSingleton<Game>()
                 .BuildServiceProvider();
         }

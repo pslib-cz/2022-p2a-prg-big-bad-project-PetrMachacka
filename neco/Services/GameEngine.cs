@@ -55,7 +55,7 @@ public class GameEngine : IGameEngine
 
     public void DrawBoard()
     {
-        //Console.Clear();
+        Console.Clear();
         Console.WriteLine("Game Board:");
         for (int row = 0; row < _rows * 2 + 1; row++)
         {
@@ -82,7 +82,7 @@ public class GameEngine : IGameEngine
                     Console.BackgroundColor = _connections[row][column] == 1 ? ConsoleColor.Red : ConsoleColor.Blue;
                     Console.Write(" ");
                     Console.ResetColor();
-                    if (column < _columns) 
+                    if (column < _columns)
                     {
                         Console.BackgroundColor = _Points[row / 2][column] == 1 ? ConsoleColor.Yellow : ConsoleColor.DarkBlue;
                         Console.Write("   ");
@@ -101,7 +101,13 @@ public class GameEngine : IGameEngine
     }
     public bool IsMoveValid(string Cords, string Cords1)
     {
-        if (ValidateCoordinates(Cords) & ValidateCoordinates(Cords1))
+        string[] pos = Cords.Split(' ');
+        string[] pos1 = Cords1.Split(' ');
+        int X = int.Parse(pos[0]);
+        int Y = int.Parse(pos[1]);
+        int X1 = int.Parse(pos1[0]);
+        int Y1 = int.Parse(pos1[1]);
+        if (ValidateCoordinates(Cords) && ValidateCoordinates(Cords1) && Math.Abs(X - X1) < 2 && Math.Abs(Y - Y1) < 2)
         {
             return true;
         }
@@ -143,23 +149,24 @@ public class GameEngine : IGameEngine
             }
         }
 
-
         _board[X][Y] = 1;
         _board[X1][Y1] = 1;
-        _currentPlayer = (_currentPlayer == "Player 1") ? "Player 2" : "Player 1";
 
+        // Update current player
+        _currentPlayer = playerName == "Player 1" ? "Player 2" : "Player 1";
     }
+
     public void CheckBoard()
     {
         int Y = 0;
-        for(int i = 0; i < _connections.Count - 1; i = i + 2)
+        for (int i = 0; i < _connections.Count - 1; i = i + 2)
         {
             for (int x = 0; x < _connections[i].Count - 1; x++)
             {
                 if (_connections[i + 1][x] == 1 & _connections[i + 1][x + 1] == 1 & _connections[i + 2][x] == 1 & _connections[i][x] == 1)
                 {
                     _Points[Y][x] = 1;
-               
+
                 }
             }
             Y++;
@@ -172,7 +179,7 @@ public class GameEngine : IGameEngine
         {
             for (int column = 1; column < _columns; column += 2)
             {
-                if (_Points[row][column] == 0) 
+                if (_Points[row][column] == 0)
                 {
                     return false; // Found an empty box, game not over
                 }

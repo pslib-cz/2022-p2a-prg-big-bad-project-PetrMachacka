@@ -1,5 +1,4 @@
 ﻿using Projekt.Interfaces;
-using System;
 
 public class Game
 {
@@ -21,6 +20,7 @@ public class Game
 
         int rows = ReadIntegerInput("Rows: ");
         int columns = ReadIntegerInput("Columns: ");
+        var currentPlayer = _player1;
 
         _gameEngine.Initialize(rows, columns);
 
@@ -28,31 +28,32 @@ public class Game
         {
             _gameEngine.DrawBoard();
 
-            var currentPlayer = GetCurrentPlayer();
-            Console.WriteLine($"Current player: {currentPlayer.GetName()}");
+            Console.WriteLine($"Current player: {_player2.GetName()}");
 
             var nextMove = currentPlayer.GetNextMove();
 
             if (_gameEngine.IsMoveValid(nextMove.Cords, nextMove.Cords1))
             {
-                _gameEngine.MakeMove  (nextMove.Cords, nextMove.Cords1, currentPlayer.GetName());
+                _gameEngine.MakeMove(nextMove.Cords, nextMove.Cords1, currentPlayer.GetName());
+                _gameEngine.CheckBoard();
+
+                currentPlayer = GetCurrentPlayer(currentPlayer);
             }
             else
             {
                 Console.WriteLine("Invalid move! Please try again.");
-                continue;
             }
-            _gameEngine.CheckBoard();
-
         }
 
+        _gameEngine.DrawBoard();
         Console.WriteLine("Game Over!");
         Console.WriteLine($"Winner: {_gameEngine.GetWinner()}");
     }
 
-    private IPlayer GetCurrentPlayer()
+
+    private IPlayer GetCurrentPlayer(IPlayer currentPlayer)
     {
-        return _gameEngine.GetCurrentPlayer() == _player1.GetName() ? _player1 : _player2;
+        return currentPlayer == _player1 ? _player2 : _player1;
     }
 
     private int ReadIntegerInput(string prompt)
