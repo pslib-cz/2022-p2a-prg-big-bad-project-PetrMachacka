@@ -1,5 +1,6 @@
 ﻿using Projekt.Interfaces;
 using System;
+using System.Diagnostics.Metrics;
 using System.Text.RegularExpressions;
 
 public class Player : IPlayer
@@ -22,11 +23,6 @@ public class Player : IPlayer
         string? Cords = Console.ReadLine();
         string? Cords1 = Console.ReadLine();
         return (Cords, Cords1);
-    }
-    public bool ValidateCoordinates(string input)
-    {
-        Regex regex = new Regex(@"^\d+\s+\d+$");
-        return regex.IsMatch(input);
     }
 
 }

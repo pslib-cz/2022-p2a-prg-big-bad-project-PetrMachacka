@@ -9,5 +9,7 @@
         bool IsGameOver();
         string GetWinner();
         string GetCurrentPlayer();
+        void HighLight(int X, int Y);
+        void CheckBoard();
     }
 }

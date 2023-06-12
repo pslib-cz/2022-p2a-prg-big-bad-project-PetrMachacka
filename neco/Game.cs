@@ -42,6 +42,8 @@ public class Game
                 Console.WriteLine("Invalid move! Please try again.");
                 continue;
             }
+            _gameEngine.CheckBoard();
+
         }
 
         Console.WriteLine("Game Over!");
