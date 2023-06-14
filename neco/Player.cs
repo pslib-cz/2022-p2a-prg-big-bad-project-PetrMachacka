@@ -1,21 +1,23 @@
-﻿using Projekt;
-using System;
-using System.Diagnostics.Metrics;
-using System.Text.RegularExpressions;
-namespace Projekt
+﻿namespace Projekt
 {
     public class Player
     {
         private readonly string _name;
+        public int _score;
 
-        public Player(string name)
+        public Player(string name, int score)
         {
             _name = name;
+            _score = score;
         }
 
         public string GetName()
         {
             return _name;
+        }
+        public int GetScore()
+        {
+            return _score;
         }
 
         public (string Cords, string Cords1) GetNextMove()

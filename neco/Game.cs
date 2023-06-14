@@ -1,18 +1,20 @@
-﻿using Projekt;
-using System.Data;
-
-namespace Projekt
+﻿namespace Projekt
 {
     public class Game
     {
-        readonly Player _player1 = new Player("1");
-        readonly Player _player2 = new Player("2");
+        readonly Player _player1 = new Player("1", 0);
+        readonly Player _player2 = new Player("2", 0);
         readonly GameMechanics _gameEngine = new();
         public void Start()
         {
+
             int rows = 5;
             int columns = 5;
+
             _gameEngine.Initialize(rows, columns);
+            _player1._score = int.Parse(_gameEngine.GetScore("1"));
+            _player2._score = int.Parse(_gameEngine.GetScore("2"));
+            Console.WriteLine(_gameEngine.GetScore("1"));
             if (_gameEngine.Started())
             {
                 _gameEngine.Load();
@@ -30,18 +32,16 @@ namespace Projekt
 
             var currentPlayer = _player1;
 
-
-            
             while (!_gameEngine.IsGameOver())
             {
-                
+
                 _gameEngine.DrawBoard();
                 //_gameEngine.SaveBoard();
                 //_gameEngine.Start(true);
                 Console.WriteLine($"Current player: {currentPlayer.GetName()}");
 
                 var nextMove = currentPlayer.GetNextMove();
-
+                Console.Clear();
                 if (_gameEngine.IsMoveValid(nextMove.Cords, nextMove.Cords1))
                 {
                     _gameEngine.MakeMove(nextMove.Cords, nextMove.Cords1, currentPlayer.GetName());
@@ -57,8 +57,22 @@ namespace Projekt
             _gameEngine.DrawBoard();
             Console.WriteLine("Game Over!");
             Console.WriteLine($"Winner: {_gameEngine.GetWinner()}");
-
-            Console.WriteLine("Player 1: "  + _gameEngine.GetScore("1") + " Player 2: " + _gameEngine.GetScore(""));
+            if (_gameEngine.GetWinner() == "Player 1")
+            {
+                _player1._score++;
+            }
+            else
+            {
+                _player2._score++;
+            }
+            Console.WriteLine("Player 1: " + _player1.GetScore() + " Player 2: " + _player2.GetScore());
+            _gameEngine.WriteScore(_player1._score, _player2._score);
+            Console.WriteLine("Enter for PlayAgain, E for exit");
+            string Again = Console.ReadLine();
+            if (Again != "E")
+            {
+                Start();
+            }
         }
 
 

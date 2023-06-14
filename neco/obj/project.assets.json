@@ -105,19 +105,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Uživatel\\.nuget\\packages\\": {}
+    "C:\\Users\\Peter\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\neco\\neco.csproj",
+      "projectUniqueName": "C:\\Users\\Peter\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\neco\\neco.csproj",
       "projectName": "neco",
-      "projectPath": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\neco\\neco.csproj",
-      "packagesPath": "C:\\Users\\Uživatel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Uživatel\\source\\repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\neco\\obj\\",
+      "projectPath": "C:\\Users\\Peter\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\neco\\neco.csproj",
+      "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Peter\\Source\\Repos\\2022-p2a-prg-big-bad-project-PetrMachacka\\neco\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Uživatel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

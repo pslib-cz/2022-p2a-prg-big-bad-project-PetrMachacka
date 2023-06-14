@@ -1,10 +1,4 @@
-﻿using Projekt;
-using System.Data.Common;
-using System.Diagnostics.Metrics;
-using System.Reflection.PortableExecutable;
-using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
-using static System.Net.Mime.MediaTypeNames;
+﻿using System.Text.RegularExpressions;
 
 namespace Projekt
 {
@@ -36,27 +30,18 @@ namespace Projekt
         {
             using (StreamReader reader = new StreamReader(_fullPathScore))
             {
-                string[] firstLine = reader.ReadLine().Split();
-                string P1 = firstLine[0];
-                string P2 = firstLine[1];
+                string firstLine = reader.ReadLine();
+                string P1 = firstLine.Substring(0, 1);
+                string P2 = firstLine.Substring(1, 1);
                 return Name == "1" ? P1 : P2;
             }
         }
-        public void WriteScore(string player)
+        public void WriteScore(int p1, int p2)
         {
             StreamWriter wr = new StreamWriter(_fullPathScore);
-            string[] score = GetScore("1").Split();
-            int p1 = int.Parse(score[0]);
-            int p2 = int.Parse(score[1]);
-            if (player == "Player 1") 
-            {
-                p1++;
-            }
-            else
-            {
-                p2++;
-            }
-            wr.WriteLine(p1+p2);
+            wr.Write(p1);
+            wr.Write(p2);
+            wr.Close();
         }
         public static string InitializePath(string relative)
         {
@@ -68,17 +53,17 @@ namespace Projekt
         }
         public bool Started()
         {
-            using(StreamReader reader = new StreamReader(_fullPathStart))
-{
+            using (StreamReader reader = new StreamReader(_fullPathStart))
+            {
                 string firstLine = reader.ReadLine();
 
                 return firstLine.Contains("1");
             }
-            
+
         }
         public void Load()
         {
-            
+
             using (StreamReader sr = new StreamReader(_fullPathBoard))
             {
                 string line;
@@ -92,7 +77,7 @@ namespace Projekt
 
                     if (counter == 0)
                     {
-                        
+
                         for (int row = 0; row < Line.Count(); row++)
                         {
                             List<char> charList = Line[row].ToList();
@@ -136,7 +121,7 @@ namespace Projekt
                     }
                     counter++;
                 }
-                
+
             }
         }
         public void Start(bool start)
@@ -150,7 +135,7 @@ namespace Projekt
         {
             StreamWriter wr = new StreamWriter(_fullPathBoard);
 
-            for(int row = 0; row < _board.Count; row++) 
+            for (int row = 0; row < _board.Count; row++)
             {
                 for (int column = 0; column < _board[row].Count; column++)
                 {
@@ -173,7 +158,7 @@ namespace Projekt
                 for (int column = 0; column < _connections[row].Count; column++)
                 {
                     wr.Write(_connections[row][column] == 0 ? 3 : _Points[row][column]);
-        }
+                }
                 wr.Write(';');
             }
             wr.Close();
@@ -212,7 +197,6 @@ namespace Projekt
 
         public void DrawBoard()
         {
-            //Console.Clear();
             Console.WriteLine("Game Board:");
             for (int row = 0; row < _rows * 2 + 1; row++)
             {
@@ -241,7 +225,8 @@ namespace Projekt
                         Console.ResetColor();
                         if (column < _columns)
                         {
-                            switch (_Points[row / 2][column]){
+                            switch (_Points[row / 2][column])
+                            {
                                 case 1:
                                     Console.BackgroundColor = ConsoleColor.Blue;
                                     break;
@@ -268,7 +253,7 @@ namespace Projekt
         {
             string[] pos = Cords.Split(' ');
             string[] pos1 = Cords1.Split(' ');
-            if (ValidateCoordinates(Cords) && ValidateCoordinates(Cords1) && int.TryParse(pos[0], out int X) && int.TryParse(pos[1], out int Y) && int.TryParse(pos1[0], out int X1) && int.TryParse(pos1[1], out int Y1) && Math.Abs(X - X1) < 2 && Math.Abs(Y - Y1) < 2 && (X1 == X^Y1 == Y) && X < _rows * 2 - 1 && X1 < _rows * 2 - 1 && Y < _columns * 2 - 1&& Y1 < _columns * 2 - 1)
+            if (ValidateCoordinates(Cords) && ValidateCoordinates(Cords1) && int.TryParse(pos[0], out int X) && int.TryParse(pos[1], out int Y) && int.TryParse(pos1[0], out int X1) && int.TryParse(pos1[1], out int Y1) && Math.Abs(X - X1) < 2 && Math.Abs(Y - Y1) < 2 && (X1 == X ^ Y1 == Y) && X < _rows * 2 - 1 && X1 < _rows * 2 - 1 && Y < _columns * 2 - 1 && Y1 < _columns * 2 - 1)
             {
                 return true;
             }
@@ -345,7 +330,7 @@ namespace Projekt
                 {
                     if (_Points[row][column] == 0)
                     {
-                        return false; 
+                        return false;
                     }
                 }
             }
@@ -358,7 +343,7 @@ namespace Projekt
             int player1Score = 0;
             int player2Score = 0;
 
-            for (int row = 0; row < _Points.Count; row++ )
+            for (int row = 0; row < _Points.Count; row++)
             {
                 for (int column = 0; column < _Points[row].Count; column += 2)
                 {
@@ -376,6 +361,7 @@ namespace Projekt
             if (player1Score > player2Score)
             {
                 return "Player 1";
+
             }
             else if (player2Score > player1Score)
             {
